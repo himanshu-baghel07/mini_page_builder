@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main_cont {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+
+}
+
+.main_section {
+  width: 80%;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #2d2d2d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+
+}
+
+.sidebar h3 {
+  text-align: center;
+}
+
+.card_cont {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+}
+
+.card_style {
+  height: 50px;
+  width: 80%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #000000;
+  border-radius: 7px;
+  margin: 15px 0;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.card_icon {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  z-index: 9999;
+  /* Ensure modal is on top of other content */
+}
+
+.modal_content {
+  background-color: #fefefe;
+  padding: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  /* Box shadow for depth */
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.horizontal_line {
+  width: 100%;
+}
+
+.all_input_cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_cont {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 5% 10%;
+}
+
+.input_box_style {
+  height: 40px;
+  font-size: 1rem;
+  border: 1px solid #d9d9d9;
+  padding: 0 10px;
+}
+
+.input_box_style:focus {
+  outline: none;
+}
+
+.save_btn {
+  width: 30%;
+  height: 40px;
+  background-color: #0044c1;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  margin: 5% 10%;
+  border-radius: 2px;
+}
+
+
+@media screen and (max-width: 576px) {
+  .main_cont {
+    flex-direction: column-reverse;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 20vh;
+
+  }
+
+  .card_cont {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .card_style {
+    width: 30%;
+  }
+}
